@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace uppgift_4_5
 {
@@ -8,7 +8,7 @@ namespace uppgift_4_5
         {
             Console.WriteLine("Skriv in ett heltal");
             string heltal = Console.ReadLine();
-
+            string talet = "";
             for(int i = 0; i < heltal.Length; i++)
             {
                 string tecken = heltal[i].ToString();
@@ -16,12 +16,14 @@ namespace uppgift_4_5
                 siffra++;
 
                 if (siffra == 10)
-                    Console.WriteLine(0);
-                else
                 {
-                    Console.WriteLine(siffra);
+                    siffra = 0;
                 }
+
+                talet += "" + siffra;
+
             }
+            Console.WriteLine(talet);
             Console.ReadKey();
         }
     }
